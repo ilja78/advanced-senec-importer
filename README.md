@@ -33,7 +33,7 @@ Prepare an `.env` file (like `.env.example`) and place CSV files into a folder o
 docker run -it --rm \
            --env-file .env \
            -v /folder/with/csv-files:/data \
-           ghcr.io/solectrus/senec-importer
+           https://github.com/Ilja78/advanced-senec-importer.git
 ```
 
 This imports all CSV files from the folder `/folder/with/csv-files` and pushes them to your InfluxDB.
