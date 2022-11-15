@@ -12,6 +12,21 @@ Import CSV data downloaded from mein-senec.de and push it to InfluxDB.
 
 ## Usage
 
+Prepare your CSV files in Excel, to calculate for every timestamp the kWh values of:
+-inverter_power
+-house_power
+-grid_power_plus
+-grid_power_minus
+-akku_power_plus
+-akku_power_minus
+then sum the values ​​from timestamp to timestamp in columns with the names:
+-Stromerzeugung_total [kWh]
+-Stromverbrauch_total [kWh]
+-Netzbezug_total [kWh]
+-Netzeinspeisung_total [kWh]
+-Akkubeladung_total [kWh]
+-Akkuentnahme_total [kWh]
+
 Prepare an `.env` file (like `.env.example`) and place CSV files into a folder of your choice. Then do:
 
 ```bash
