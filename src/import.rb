@@ -89,7 +89,7 @@ class Import
         house_power_total: parse_kWh(row, 'Stromverbrauch_total [kWh]'),
         bat_power_plus_total: parse_kWh(row, 'Akkubeladung_total [kWh]'),
         bat_power_minus_total: parse_kWh(row, 'Akkuentnahme_total [kWh]'),
-        inverter_power_total: parse_kWh(row, 'Stromerzeugung_total [kWh]'),
+        inverter_power_total: parse_kWh(row, 'Stromerzeugung_total [kWh]')
       }
     }
   end
