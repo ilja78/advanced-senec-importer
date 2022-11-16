@@ -54,8 +54,8 @@ class Import
     cell(row, *columns).sub(',', '.').to_f
   end
 
-  # Kilowatt-Stunde
-  def parse_kWh(row, *columns)
+  # KiloWatt-Stunde
+  def parse_kwh(row, *columns)
     cell(row, *columns).sub(',', '.').to_f
   end
 
