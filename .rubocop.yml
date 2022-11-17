@@ -19,4 +19,4 @@ Metrics/MethodLength:
   Max: 21
 
 Minitest/MultipleAssertions:
-  Max: 10
+  Max: 21
