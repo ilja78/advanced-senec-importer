@@ -57,7 +57,7 @@ class Import
   # KiloWatt-Stunde
   def parse_kwh(row, *columns)
     cell(row, *columns).sub(',', '.').to_f
-   end
+  end
 
   def cell(row, *columns)
     # Find column with values (can have different names)
