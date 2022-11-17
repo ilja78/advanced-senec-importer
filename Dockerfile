@@ -1,5 +1,5 @@
 FROM ruby:3.1.2-alpine
-LABEL maintainer="georg@ledermann.dev"
+LABEL maintainer="magunia@gmail.com"
 
 WORKDIR /advanced-senec-importer
 
