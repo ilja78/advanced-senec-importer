@@ -4,7 +4,7 @@ VCR.configure do |config|
   config.cassette_library_dir = 'test/cassettes'
   config.hook_into :webmock
 
-  sensitive_environment_variables = %w[
+  sensitive_environment_variables = %w, %wh[
     INFLUX_HOST
     INFLUX_TOKEN
     INFLUX_ORG
