@@ -79,7 +79,6 @@ class Import
         house_power: parse_kw(row, 'Stromverbrauch [kW]'),
         bat_power_plus: parse_kw(row, 'Akkubeladung [kW]', 'Akku-Beladung [kW]'),
         bat_power_minus: parse_kw(row, 'Akkuentnahme [kW]', 'Akku-Entnahme [kW]'),
-        bat_fuel_charge: nil,
         bat_charge_current: parse_a(row, 'Akku Stromstärke [A]'),
         bat_voltage: parse_v(row, 'Akku Spannung [V]'),
         grid_power_plus: parse_kw(row, 'Netzbezug [kW]'),
