@@ -44,6 +44,11 @@ class Import
     (cell(row, *columns).sub(',', '.').to_f * 1_000).round
   end
 
+  # KiloWattStunde
+  def parse_kwh(row, *columns)
+    cell(row, *columns).sub(',', '.').to_f
+  end
+
   # Ampere
   def parse_a(row, *columns)
     cell(row, *columns).sub(',', '.').to_f
@@ -54,11 +59,6 @@ class Import
     cell(row, *columns).sub(',', '.').to_f
   end
   
-  # KiloWattStunde
-  def parse_kwh(row, *columns)
-    cell(row, *columns).sub(',', '.').to_f
-  end
-
   def cell(row, *columns)
     # Find column with values (can have different names)
     column = columns.find { |col| row[col] }
