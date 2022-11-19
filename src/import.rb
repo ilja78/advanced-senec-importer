@@ -60,9 +60,9 @@ class Import
   end
   
   # Find column with values (can have different names)
-  def cell(row, *columns)    
+  def cell(row, *columns)
     column = columns.find { |col| row[col] }
-
+    
     row[column]
   end
 
