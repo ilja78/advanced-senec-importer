@@ -49,6 +49,10 @@ class Import
     cell(row, *columns).sub(',', '.').to_f
   end
 
+  def grid_power_plus_total
+    @senec_data.grid_power_plus_total.round
+  end
+
   # Ampere
   def parse_a(row, *columns)
     cell(row, *columns).sub(',', '.').to_f
