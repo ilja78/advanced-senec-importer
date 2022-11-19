@@ -58,7 +58,7 @@ class Import
   def parse_v(row, *columns)
     cell(row, *columns).sub(',', '.').to_f
   end
-  
+
   # Find column with values (can have different names)
   def cell(row, *columns)
     column = columns.find { |col| row[col] }
