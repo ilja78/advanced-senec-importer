@@ -26,6 +26,9 @@ jobs:
       - name: Lint with RuboCop
         run: bundle exec rubocop
 
+      - name: Run tests
+        run: bundle exec rake test
+
   build:
     runs-on: ubuntu-latest
     needs: test
@@ -40,7 +43,7 @@ jobs:
         with:
           # list of Docker images to use as base name for tags
           images: |
-            ghcr.io/ilja78/advanced-senec-importer
+            ghcr.io/solectrus/senec-importer
           # generate Docker tags based on the following events/attributes
           tags: |
             type=ref,event=branch
