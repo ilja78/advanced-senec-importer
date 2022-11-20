@@ -2,7 +2,7 @@ FROM ruby:3.1.2-alpine
 RUN apk add --no-cache build-base
 
 WORKDIR /advanced-senec-collector
-COPY Gemfile* /senec-collector/
+COPY Gemfile* /advanced-senec-collector/
 RUN bundle config --local frozen 1 && \
     bundle config --local without 'development test' && \
     bundle install -j4 --retry 3 && \
