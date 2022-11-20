@@ -77,7 +77,13 @@ class Import
         bat_charge_current: parse_a(row, 'Akku Stromstärke [A]'),
         bat_voltage: parse_v(row, 'Akku Spannung [V]'),
         grid_power_plus: parse_kw(row, 'Netzbezug [kW]'),
-        grid_power_minus: parse_kw(row, 'Netzeinspeisung [kW]')
+        grid_power_minus: parse_kw(row, 'Netzeinspeisung [kW]'),
+        grid_power_plus_total: parse_kw(row, 'Netzbezug_total [kWh]'),
+        grid_power_minus_total: parse_kw(row, 'Netzeinspeisung_total [kWh]'),
+        house_power_total: parse_kw(row, 'Stromverbrauch_total [kWh]'),
+        bat_power_plus_total: parse_kw(row, 'Akkubeladung_total [kWh]'),
+        bat_power_minus_total: parse_kw(row, 'Akkuentnahme_total [kWh]'),
+        inverter_power_total: parse_kw(row, 'Stromerzeugung_total [kWh]')
       }
     }
   end
