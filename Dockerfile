@@ -14,7 +14,7 @@ ENV MALLOC_ARENA_MAX 2
 WORKDIR /senec-collector
 
 COPY --from=builder /usr/local/bundle/ /usr/local/bundle/
-COPY . /advanced-senec-collector/
+COPY . /senec-collector/
 
 ENTRYPOINT bundle exec src/main.rb
 
