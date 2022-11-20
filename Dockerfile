@@ -13,8 +13,6 @@ LABEL maintainer="georg@ledermann.dev"
 ENV MALLOC_ARENA_MAX 2
 WORKDIR /advanced-senec-collector
 
-COPY --from=builder /usr/local/bundle/ /usr/local/bundle/
-COPY . /advanced-senec-collector/
 
 ENTRYPOINT bundle exec src/main.rb
 
