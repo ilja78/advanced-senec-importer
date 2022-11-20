@@ -9,9 +9,9 @@ RUN bundle config --local frozen 1 && \
     bundle clean --force
 
 FROM ruby:3.1.2-alpine
-LABEL maintainer="magunia@gmail.com"
+LABEL maintainer="georg@ledermann.dev"
 ENV MALLOC_ARENA_MAX 2
-WORKDIR /advanced-senec-collector
+WORKDIR /senec-collector
 
 COPY --from=builder /usr/local/bundle/ /usr/local/bundle/
 COPY . /advanced-senec-collector/
