@@ -44,6 +44,11 @@ class Import
     (cell(row, *columns).sub(',', '.').to_f * 1_000).round
   end
 
+  # KiloWattStunde
+  def parse_kwh(row, *columns)
+    (cell(row, *columns).sub(',', '.').to_f * 1_000).round
+  end
+
   # Ampere
   def parse_a(row, *columns)
     cell(row, *columns).sub(',', '.').to_f
@@ -78,12 +83,12 @@ class Import
         bat_voltage: parse_v(row, 'Akku Spannung [V]'),
         grid_power_plus: parse_kw(row, 'Netzbezug [kW]'),
         grid_power_minus: parse_kw(row, 'Netzeinspeisung [kW]'),
-        grid_power_plus_total: parse_kw(row, 'Netzbezug_total [kWh]'),
-        grid_power_minus_total: parse_kw(row, 'Netzeinspeisung_total [kWh]'),
-        house_power_total: parse_kw(row, 'Stromverbrauch_total [kWh]'),
-        bat_power_plus_total: parse_kw(row, 'Akkubeladung_total [kWh]'),
-        bat_power_minus_total: parse_kw(row, 'Akkuentnahme_total [kWh]'),
-        inverter_power_total: parse_kw(row, 'Stromerzeugung_total [kWh]')
+        grid_power_plus_total: parse_kwh(row, 'Netzbezug_total [kWh]'),
+        grid_power_minus_total: parse_kwh(row, 'Netzeinspeisung_total [kWh]'),
+        house_power_total: parse_kwh(row, 'Stromverbrauch_total [kWh]'),
+        bat_power_plus_total: parse_kwh(row, 'Akkubeladung_total [kWh]'),
+        bat_power_minus_total: parse_kwh(row, 'Akkuentnahme_total [kWh]'),
+        inverter_power_total: parse_kwh(row, 'Stromerzeugung_total [kWh]')
       }
     }
   end
