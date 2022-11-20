@@ -44,8 +44,6 @@ class Import
     (cell(row, *columns).sub(',', '.').to_f * 1_000).round
   end
 
-  private
-
   # KiloWattStunde
   def parse_kwh(row, *columns)
     (cell(row, *columns).sub(',', '.').to_f * 1_000).round
